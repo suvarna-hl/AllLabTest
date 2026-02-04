@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lab test UI</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+   
+</head>
+
+<body class="pareent" class="container-fluid">
+  <div class="container-fluid" id="greenb" >
+    <img src="./injection.png" alt="Background image" id="bgw" />
+
+    <div class="text">
+      <div>
+        Home / Lab Test Price in Gurugram
+      </div>
+
+      <div>
+        Lab Test Price in Gurgaon
+      </div>
+
+      <div style="font-size: 15px; line-height: 22px">
+        Last Update : Dec 20, 2025
+      </div>
+    </div>
+
+    <div id="whiteBox" class="container-fluid" >
+      <div id="whitenav">
+        <p class="seltext">
+          Select the City</p>
+
+        <select id="citySelect">
+          <option>Gurgaon</option>
+          <option>Delhi</option>
+          <option>Noida</option>
+        </select>
+
+        <div id="whitebtn">
+          <button class="filter-btn">
+            PROFILE
+          </button>
+
+          <button class="filter-btn" >
+            PARAMETER
+          </button>
+          <button class="filter-btn">PACKAGES
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid" id="lapview">
+    <div id="profileHeader">
+      <div>Lab Test Name</div>
+      <div id="testsHeader"></div>
+      <div id="priceHeader"></div>
+    </div>
+
+    <div id="parameterHeader" >
+      <div class="labhead">Lab Test Name</div>
+      <div id="params" ></div>
+    </div>
+
+    <div id="rowsContainer"></div>
+    <template id="rowTemplate">
+       <p class="row-divider"></p>
+  <div class="row">
+    <div>
+      <h3></h3>
+      <p class="description"></p>
+    </div>
+
+    <div class="test-count"></div>
+    <div class="right-cell"></div>
+  </div>
+
+ 
+</template>
+
+
+    <div class="loadbt">
+      <button id= "loadbtn">
+        Load More <img src="Vector_278.png" style="width: 12px" />
+      </button>
+    </div>
+  </div>
+
+
+<!-- gradient box -->
+<div class="gradient-box">
+  
+  <div class="gradmain">
+    
+    <div id="imgdash">
+      <img src="dyk.png" id="dyk">
+      <div class="verticalgrad"></div>
+
+    </div>
+
+    <div>
+      <h3>
+        68% of Gurugram residents include CBC in their routine health
+        checkup.
+      </h3>
+      <p>
+        View Health Report of your City
+      </p>
+    </div>
+
+    <div id="vr" >
+      <button>
+        View Report
+      </button>
+    </div>
+  </div>
+</div>
+
+  <h2 class="headi1">
+    Health Insights for Gurgaon
+  </h2>
+
+  <div class="colorboxes">
+  <div class="clrbx1">
+    <div class="clrbx-inner">
+      <div class="clrbxh1">Total Tests Done in Gurugram</div>
+      <div class="dashclr1"></div>
+      <div class="clrtexts1">
+        <span>45,230</span>
+        <p>tests</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="clrbx2">
+    <div class="clrbx-inner">
+      <div class="clrbhx2">Customer rating in Gurugram</div>
+      <div class="dashclr2"></div>
+      <div class="clrtexts2">
+        <span>4.8 /5</span>
+        <p id="l-rev">12,450 reviews</p>
+        <p id="m-rev">based on 12,450 reviews</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="clrbx3">
+    <div class="clrbx-inner">
+      <div class="clrbxh3">Total Tests Done in India</div>
+      <div class="dashclr3"></div>
+      <div class="clrtexts3">
+        <span>1.2</span>
+        <p>&nbsp;Million</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="clrbx4">
+    <div class="clrbx-inner">
+      <div class="clrbxh4">Certified Labs in India</div>
+      <div class="dashclr4"></div>
+      <div class="clrtexts4">
+        <span>21+</span>
+        <p>&nbsp;Labs</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+<div class="piebox">
+  <section class="pie">
+    <header class="pie-text">
+
+      <h3 class="pieh">Diabetes in Gurugram</h3>
+      <p class="piep">People suffering from pre-diabetes and diabetic stage</p>
+      <p id="data0" class="databe"></p>
+    </header>
+
+    <figure class="pieda">
+      <canvas id="pie0" class="allpie"></canvas>
+    </figure>
+  </section>
+
+  <section class="pie">
+    <header class="pie-text">
+      <h3 class="pieh">Thyroid in Gurugram</h3>
+      <p class="piep">People suffering from pre-diabetes and diabetic stage</p>
+      <p id="data1" class="databe"></p>
+    </header>
+
+    <figure class="pieda">
+      <canvas id="pie1" class="allpie"></canvas>
+    </figure>
+  </section>
+
+  <section class="pie">
+    <header class="pie-text">
+      <h3 class="pieh">Lipid in Gurugram</h3>
+      <p class="piep">Here is the analysis of Gurugram report</p>
+      <p id="data2" class="databe"></p>
+    </header>
+
+    <figure class="pieda">
+      <canvas id="pie2" class="allpie"></canvas>
+    </figure>
+  </section>
+
+  <section class="pie">
+    <header class="pie-text">
+      <h3 class="pieh">Hypertension in Gurugram</h3>
+      <p class="piep">People suffering from pre-diabetes and diabetic stage</p>
+      <p id="data3" class="databe"></p>
+    </header>
+
+    <figure class="pieda">
+      <canvas id="pie3" class="allpie"></canvas>
+    </figure>
+  </section>
+</div>
+
+
+<div class="foot">
+<p >Men & Women</p>
+<p >Age 25-50 Yrs</p>
+<p>Sample Size: 15k+</p>
+</div>
+<div class="footnote">
+  Data Source: Healthians Research &nbsp; I &nbsp; Last updated : 14 Jan 2025
+</div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+  <script src="chart.js"></script>
+</body>
+
+</html>
