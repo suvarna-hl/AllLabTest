@@ -113,6 +113,8 @@ html, body {
     background-color: #fbfbfb;
     border-color: #d8d8d8;
     font-size: 16px;
+    max-height: px;
+    overflow-y: auto;
 }
 
 .filter-btn {
@@ -362,6 +364,9 @@ margin-top:10px;
     font-size: 18px;
     border: none;
 }
+.parent {
+  overflow: visible; /* not hidden */
+}
 
 #headi1 {
     margin-left: 20px;
@@ -564,7 +569,7 @@ margin-top:10px;
   border-radius: 12px;
   padding: 20px;
   display: grid;
-  grid-template-columns: 3fr 2fr; 
+  grid-template-columns: 2fr 3fr; 
   align-items: center;
 }
 
@@ -589,15 +594,19 @@ margin-top:10px;
     gap: 12px;
 }
 
-.pieda {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.pieda {.pieda {
+  position: relative;
+  /* Increase these values! If the container is 200px, 
+     a 180px chart + 20px labels will always feel cramped. */
+  height: 350px; 
+  width: 100%;
+  margin: 0 auto;
+}
 }
 
 .allpie {
-        height: 180px;
-    width: 170px;
+         height: 280px;
+    width: 300px;
 }
 
 .foot {
@@ -796,8 +805,13 @@ margin-top:10px;
         white-space: nowrap;
     }
 
-    .piebox{ margin-left: 10px;
-    margin-right: 10px;}
+    .piebox{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    width: auto;
+    margin-left:10px;
+    margin-right:10px;
+}
 
     .headi1 {
         font-size: 18px;
@@ -809,7 +823,7 @@ margin-top:10px;
         background-color: white;
         padding: 16px;
         border-radius: 12px;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr);
         display: grid;
         max-width: auto;
         margin: 20px auto;
@@ -964,7 +978,7 @@ margin-top:10px;
     }
     #dyk{
    align-self: center;}
-.pie{  grid-template-columns: 1fr 220px; }
+.pie{  grid-template-columns: 1fr 400px; }
     
 
     #rowsContainer .test-count {
@@ -1189,14 +1203,12 @@ margin-top:10px;
     }
     
     .pie {
-        max-width: 100%;
+        max-width: 300px;
     }
     
     .foot p {
         font-size: 9px !important;
     }
-}
-@media (max-width: 320px) {
     .clrbx1, .clrbx2, .clrbx3, .clrbx4 {
         height: 124px;
     }

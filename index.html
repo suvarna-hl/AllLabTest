@@ -35,10 +35,17 @@
         <p class="seltext">
           Select the City</p>
 
-        <select id="citySelect">
+        <select id="citySelect" >
           <option>Gurgaon</option>
           <option>Delhi</option>
           <option>Noida</option>
+          <option>Meerut</option>
+          <option>Bangalore</option>
+          <option>Chennai</option>
+          <option>Mumbai</option>
+          <option>Kolkata</option>
+          <option>Dhanbad</option>
+          <option>Ranchi</option>
         </select>
 
         <div id="whitebtn">
@@ -236,9 +243,130 @@
   Data Source: Healthians Research &nbsp; I &nbsp; Last updated : 14 Jan 2025
 </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<div id="cityDataContainer" style="display: none;">
+  
+  <div class="city-data" data-city="Gurgaon">
+    <div class="test-item" data-title="Complete Blood Count" data-description="Also known as : CBC, Complete Hemogram, Full Blood Count, Blood Panel" data-tests="3 Tests" data-price="₹ 349" data-parameters="Hemoglobin,RBC Count,WBC Count,Platelet Count,Hematocrit,MCV,MCH,MCHC"></div>
+    <div class="test-item" data-title="Urine Routine & Microscopy Extended" data-description="Also known as : pH Urine, Urine routine test, Leucocyte Esterase" data-tests="3 Tests" data-price="₹ 349" data-parameters="Urine pH,Protein,Glucose,Ketones,Bilirubin,Urobilinogen,Pus Cells,RBCs"></div>
+    <div class="test-item" data-title="Liver Function Test" data-description="Also known as : Liver profile, LFT, Liver Function Test, Basic Liver Panel" data-tests="3 Tests" data-price="₹ 349" data-parameters="SGOT (AST),SGPT (ALT),Alkaline Phosphatase,Total Bilirubin,Direct Bilirubin,Albumin,Globulin,A/G Ratio"></div>
+    <div class="test-item" data-title="Thyroid Profile" data-description="Also known as : TSH, T3, T4, Thyroid Function Test" data-tests="3 Tests" data-price="₹ 499" data-parameters="TSH,Free T3,Free T4,Total T3,Total T4"></div>
+  </div>
+
+  <div class="city-data" data-city="Delhi">
+    <div class="test-item" data-title="Complete Blood Counuut" data-description="Also known as : CBC, Complete Hemogram, Full Blood Count, Blood Panel" data-tests="3 Tests" data-price="₹ 299" data-parameters="Hemoglobin,RBC Count,WBC Count,Platelet Count,Hematocrit,MCV,MCH,MCHC"></div>
+    <div class="test-item" data-title="Urine Routine & Microscopy Extended" data-description="Also known as : pH Urine, Urine routine test, Leucocyte Esterase" data-tests="3 Tests" data-price="₹ 299" data-parameters="Urine pH,Protein,Glucose,Ketones,Bilirubin,Urobilinogen,Pus Cells,RBCs"></div>
+    <div class="test-item" data-title="Liver Function Test" data-description="Also known as : Liver profile, LFT, Liver Function Test, Basic Liver Panel" data-tests="3 Tests" data-price="₹ 299" data-parameters="SGOT (AST),SGPT (ALT),Alkaline Phosphatase,Total Bilirubin,Direct Bilirubin,Albumin,Globulin,A/G Ratio"></div>
+    <div class="test-item" data-title="Kidney Function Test" data-description="Also known as : KFT, Renal Function Test, Kidney Panel" data-tests="4 Tests" data-price="₹ 399" data-parameters="Creatinine,BUN,Sodium,Potassium,Calcium,Phosphorus"></div>
+  </div>
+
+  <div class="city-data" data-city="Noida">
+    <div class="test-item" data-title="Complete Blood Count" data-description="Also known as : CBC, Complete Hemogram, Full Blood Count, Blood Panel" data-tests="3 Tests" data-price="₹ 329" data-parameters="Hemoglobin,RBC Count,WBC Count,Platelet Count,Hematocrit,MCV,MCH,MCHC"></div>
+    <div class="test-item" data-title="Urine Routine & Microscopy Extended" data-description="Also known as : pH Urine, Urine routine test, Leucocyte Esterase" data-tests="3 Tests" data-price="₹ 329" data-parameters="Urine pH,Protein,Glucose,Ketones,Bilirubin,Urobilinogen,Pus Cells,RBCs"></div>
+    <div class="test-item" data-title="Lipid Profile" data-description="Also known as : Cholesterol Test, Lipids, Lipid Panel" data-tests="4 Tests" data-price="₹ 349" data-parameters="Total Cholesterol,LDL Cholesterol,HDL Cholesterol,Triglycerides,VLDL"></div>
+  </div>
+
+  <div class="city-data" data-city="Meerut">
+    <div class="test-item" data-title="Complete Blood Count" data-description="Also known as : CBC, Complete Hemogram, Full Blood Count, Blood Panel" data-tests="3 Tests" data-price="₹ 279" data-parameters="Hemoglobin,RBC Count,WBC Count,Platelet Count,Hematocrit,MCV,MCH,MCHC"></div>
+    <div class="test-item" data-title="Blood Sugar Test" data-description="Also known as : Glucose Test, FBS, Random Blood Sugar" data-tests="2 Tests" data-price="₹ 199" data-parameters="Fasting Blood Sugar,Random Blood Sugar,Post Meal Sugar"></div>
+    <div class="test-item" data-title="Liver Function Test" data-description="Also known as : Liver profile, LFT, Liver Function Test, Basic Liver Panel" data-tests="3 Tests" data-price="₹ 279" data-parameters="SGOT (AST),SGPT (ALT),Alkaline Phosphatase,Total Bilirubin,Direct Bilirubin,Albumin,Globulin,A/G Ratio"></div>
+  </div>
+
+  <div class="city-data" data-city="Bangalore">
+    <div class="test-item" data-title="Complete Blood Count" data-description="Also known as : CBC, Complete Hemogram, Full Blood Count, Blood Panel" data-tests="3 Tests" data-price="₹ 319" data-parameters="Hemoglobin,RBC Count,WBC Count,Platelet Count,Hematocrit,MCV,MCH,MCHC"></div>
+    <div class="test-item" data-title="Urine Routine & Microscopy Extended" data-description="Also known as : pH Urine, Urine routine test, Leucocyte Esterase" data-tests="3 Tests" data-price="₹ 319" data-parameters="Urine pH,Protein,Glucose,Ketones,Bilirubin,Urobilinogen,Pus Cells,RBCs"></div>
+    <div class="test-item" data-title="Liver Function Test" data-description="Also known as : Liver profile, LFT, Liver Function Test, Basic Liver Panel" data-tests="3 Tests" data-price="₹ 319" data-parameters="SGOT (AST),SGPT (ALT),Alkaline Phosphatase,Total Bilirubin,Direct Bilirubin,Albumin,Globulin,A/G Ratio"></div>
+    <div class="test-item" data-title="Kidney Function Test" data-description="Also known as : KFT, Renal Function Test, Kidney Panel" data-tests="4 Tests" data-price="₹ 369" data-parameters="Creatinine,BUN,Sodium,Potassium,Calcium,Phosphorus"></div>
+    <div class="test-item" data-title="Thyroid Profile" data-description="Also known as : TSH, T3, T4, Thyroid Function Test" data-tests="3 Tests" data-price="₹ 449" data-parameters="TSH,Free T3,Free T4,Total T3,Total T4"></div>
+    <div class="test-item" data-title="Lipid Profile" data-description="Also known as : Cholesterol Test, Lipids, Lipid Panel" data-tests="4 Tests" data-price="₹ 319" data-parameters="Total Cholesterol,LDL Cholesterol,HDL Cholesterol,Triglycerides,VLDL"></div>
+    <div class="test-item" data-title="Blood Sugar Test" data-description="Also known as : Glucose Test, FBS, Random Blood Sugar" data-tests="2 Tests" data-price="₹ 179" data-parameters="Fasting Blood Sugar,Random Blood Sugar,Post Meal Sugar"></div>
+    <div class="test-item" data-title="Vitamin B12" data-description="Also known as : Cobalamin, Cyanocobalamin" data-tests="1 Test" data-price="₹ 349" data-parameters="Vitamin B12,B12 Absorption,Methylmalonic Acid"></div>
+    <div class="test-item" data-title="Iron Profile" data-description="Also known as : Serum Iron, TIBC, Ferritin" data-tests="3 Tests" data-price="₹ 299" data-parameters="Serum Iron,TIBC,Ferritin,Iron Saturation"></div>
+    <div class="test-item" data-title="Cardiac Risk Assessment" data-description="Also known as : Heart Health Panel, Troponin" data-tests="4 Tests" data-price="₹ 799" data-parameters="Troponin,NT-proBNP,CK-MB,Myoglobin,LDH"></div>
+    <div class="test-item" data-title="Rheumatoid Arthritis Panel" data-description="Also known as : RA Panel, Rheumatoid Factor" data-tests="3 Tests" data-price="₹ 349" data-parameters="Rheumatoid Factor,Anti-CCP,ESR,CRP"></div>
+    <div class="test-item" data-title="Allergy Testing" data-description="Also known as : Allergen Specific IgE, RAST" data-tests="Multiple" data-price="₹ 499" data-parameters="Pollen,Dust Mites,Pet Dander,Food Allergens"></div>
+  </div>
+
+  <div class="city-data" data-city="Chennai">
+    <div class="test-item" data-title="Complete Blood Count" data-description="Also known as : CBC, Complete Hemogram, Full Blood Count, Blood Panel" data-tests="3 Tests" data-price="₹ 309" data-parameters="Hemoglobin,RBC Count,WBC Count,Platelet Count,Hematocrit,MCV,MCH,MCHC"></div>
+    <div class="test-item" data-title="Liver Function Test" data-description="Also known as : Liver profile, LFT, Liver Function Test, Basic Liver Panel" data-tests="3 Tests" data-price="₹ 309" data-parameters="SGOT (AST),SGPT (ALT),Alkaline Phosphatase,Total Bilirubin,Direct Bilirubin,Albumin,Globulin,A/G Ratio"></div>
+    <div class="test-item" data-title="Thyroid Profile" data-description="Also known as : TSH, T3, T4, Thyroid Function Test" data-tests="3 Tests" data-price="₹ 439" data-parameters="TSH,Free T3,Free T4,Total T3,Total T4"></div>
+    <div class="test-item" data-title="Lipid Profile" data-description="Also known as : Cholesterol Test, Lipids, Lipid Panel" data-tests="4 Tests" data-price="₹ 299" data-parameters="Total Cholesterol,LDL Cholesterol,HDL Cholesterol,Triglycerides,VLDL"></div>
+    <div class="test-item" data-title="Blood Sugar Test" data-description="Also known as : Glucose Test, FBS, Random Blood Sugar" data-tests="2 Tests" data-price="₹ 169" data-parameters="Fasting Blood Sugar,Random Blood Sugar,Post Meal Sugar"></div>
+    <div class="test-item" data-title="Kidney Function Test" data-description="Also known as : KFT, Renal Function Test, Kidney Panel" data-tests="4 Tests" data-price="₹ 349" data-parameters="Creatinine,BUN,Sodium,Potassium,Calcium,Phosphorus"></div>
+    <div class="test-item" data-title="Urine Routine & Microscopy Extended" data-description="Also known as : pH Urine, Urine routine test, Leucocyte Esterase" data-tests="3 Tests" data-price="₹ 309" data-parameters="Urine pH,Protein,Glucose,Ketones,Bilirubin,Urobilinogen,Pus Cells,RBCs"></div>
+    <div class="test-item" data-title="Vitamin D" data-description="Also known as : Calcitriol, 25-Hydroxy Vitamin D" data-tests="1 Test" data-price="₹ 399" data-parameters="25-OH Vitamin D,1,25-OH Vitamin D"></div>
+    <div class="test-item" data-title="Calcium & Phosphorus" data-description="Also known as : Mineral Metabolism Panel" data-tests="2 Tests" data-price="₹ 229" data-parameters="Serum Calcium,Inorganic Phosphorus,Magnesium"></div>
+    <div class="test-item" data-title="Prostate Health" data-description="Also known as : PSA Test, Prostate Specific Antigen" data-tests="1 Test" data-price="₹ 449" data-parameters="PSA Total,PSA Free,PSA Density"></div>
+    <div class="test-item" data-title="Women's Wellness Panel" data-description="Also known as : Hormone Panel, Female Health" data-tests="4 Tests" data-price="₹ 599" data-parameters="Estrogen,Progesterone,FSH,LH,Prolactin"></div>
+    <div class="test-item" data-title="COVID-19 Antibody" data-description="Also known as : COVID Serology, SARS-CoV-2" data-tests="1 Test" data-price="₹ 299" data-parameters="IgG Antibody,IgM Antibody"></div>
+  </div>
+
+  <div class="city-data" data-city="Mumbai">
+    <div class="test-item" data-title="Complete Blood Count" data-description="Also known as : CBC, Complete Hemogram, Full Blood Count, Blood Panel" data-tests="3 Tests" data-price="₹ 359" data-parameters="Hemoglobin,RBC Count,WBC Count,Platelet Count,Hematocrit,MCV,MCH,MCHC"></div>
+    <div class="test-item" data-title="Liver Function Test" data-description="Also known as : Liver profile, LFT, Liver Function Test, Basic Liver Panel" data-tests="3 Tests" data-price="₹ 359" data-parameters="SGOT (AST),SGPT (ALT),Alkaline Phosphatase,Total Bilirubin,Direct Bilirubin,Albumin,Globulin,A/G Ratio"></div>
+    <div class="test-item" data-title="Kidney Function Test" data-description="Also known as : KFT, Renal Function Test, Kidney Panel" data-tests="4 Tests" data-price="₹ 399" data-parameters="Creatinine,BUN,Sodium,Potassium,Calcium,Phosphorus"></div>
+    <div class="test-item" data-title="Lipid Profile" data-description="Also known as : Cholesterol Test, Lipids, Lipid Panel" data-tests="4 Tests" data-price="₹ 349" data-parameters="Total Cholesterol,LDL Cholesterol,HDL Cholesterol,Triglycerides,VLDL"></div>
+    <div class="test-item" data-title="Thyroid Profile" data-description="Also known as : TSH, T3, T4, Thyroid Function Test" data-tests="3 Tests" data-price="₹ 499" data-parameters="TSH,Free T3,Free T4,Total T3,Total T4"></div>
+    <div class="test-item" data-title="Blood Sugar Test" data-description="Also known as : Glucose Test, FBS, Random Blood Sugar" data-tests="2 Tests" data-price="₹ 199" data-parameters="Fasting Blood Sugar,Random Blood Sugar,Post Meal Sugar"></div>
+    <div class="test-item" data-title="Urine Routine & Microscopy Extended" data-description="Also known as : pH Urine, Urine routine test, Leucocyte Esterase" data-tests="3 Tests" data-price="₹ 359" data-parameters="Urine pH,Protein,Glucose,Ketones,Bilirubin,Urobilinogen,Pus Cells,RBCs"></div>
+    <div class="test-item" data-title="Tumor Markers" data-description="Also known as : Cancer Screening Panel, CEA, PSA" data-tests="5 Tests" data-price="₹ 899" data-parameters="CEA,PSA,CA-125,AFP,HCG"></div>
+    <div class="test-item" data-title="Hepatitis Screening" data-description="Also known as : Viral Hepatitis Panel" data-tests="3 Tests" data-price="₹ 449" data-parameters="Hepatitis A IgM,Hepatitis B Surface Antigen,Hepatitis C Antibody"></div>
+    <div class="test-item" data-title="Bone Health Panel" data-description="Also known as : Osteoporosis Screening, Bone Density Markers" data-tests="3 Tests" data-price="₹ 349" data-parameters="Alkaline Phosphatase,Calcium,Phosphorus,Vitamin D"></div>
+    <div class="test-item" data-title="Diabetes Screening" data-description="Also known as : HbA1c, Glucose, C-Peptide" data-tests="3 Tests" data-price="₹ 299" data-parameters="HbA1c,Fasting Glucose,C-Peptide"></div>
+    <div class="test-item" data-title="Lactose Intolerance Test" data-description="Also known as : Hydrogen Breath Test" data-tests="1 Test" data-price="₹ 399" data-parameters="Breath Hydrogen,Breath Methane"></div>
+  </div>
+
+  <div class="city-data" data-city="Kolkata">
+    <div class="test-item" data-title="Complete Blood Count" data-description="Also known as : CBC, Complete Hemogram, Full Blood Count, Blood Panel" data-tests="3 Tests" data-price="₹ 289" data-parameters="Hemoglobin,RBC Count,WBC Count,Platelet Count,Hematocrit,MCV,MCH,MCHC"></div>
+    <div class="test-item" data-title="Liver Function Test" data-description="Also known as : Liver profile, LFT, Liver Function Test, Basic Liver Panel" data-tests="3 Tests" data-price="₹ 289" data-parameters="SGOT (AST),SGPT (ALT),Alkaline Phosphatase,Total Bilirubin,Direct Bilirubin,Albumin,Globulin,A/G Ratio"></div>
+    <div class="test-item" data-title="Urine Routine & Microscopy Extended" data-description="Also known as : pH Urine, Urine routine test, Leucocyte Esterase" data-tests="3 Tests" data-price="₹ 289" data-parameters="Urine pH,Protein,Glucose,Ketones,Bilirubin,Urobilinogen,Pus Cells,RBCs"></div>
+    <div class="test-item" data-title="Blood Sugar Test" data-description="Also known as : Glucose Test, FBS, Random Blood Sugar" data-tests="2 Tests" data-price="₹ 159" data-parameters="Fasting Blood Sugar,Random Blood Sugar,Post Meal Sugar"></div>
+    <div class="test-item" data-title="Lipid Profile" data-description="Also known as : Cholesterol Test, Lipids, Lipid Panel" data-tests="4 Tests" data-price="₹ 279" data-parameters="Total Cholesterol,LDL Cholesterol,HDL Cholesterol,Triglycerides,VLDL"></div>
+    <div class="test-item" data-title="Kidney Function Test" data-description="Also known as : KFT, Renal Function Test, Kidney Panel" data-tests="4 Tests" data-price="₹ 329" data-parameters="Creatinine,BUN,Sodium,Potassium,Calcium,Phosphorus"></div>
+    <div class="test-item" data-title="Thyroid Profile" data-description="Also known as : TSH, T3, T4, Thyroid Function Test" data-tests="3 Tests" data-price="₹ 429" data-parameters="TSH,Free T3,Free T4,Total T3,Total T4"></div>
+    <div class="test-item" data-title="Ammonia Level" data-description="Also known as : Serum Ammonia, Liver Function" data-tests="1 Test" data-price="₹ 399" data-parameters="Serum Ammonia"></div>
+    <div class="test-item" data-title="Blood Culture" data-description="Also known as : Sepsis Screening, Bacterial Infection" data-tests="1 Test" data-price="₹ 349" data-parameters="Aerobic Culture,Anaerobic Culture"></div>
+    <div class="test-item" data-title="Coagulation Profile" data-description="Also known as : PT, INR, PTT, Clotting Screen" data-tests="3 Tests" data-price="₹ 299" data-parameters="PT,INR,PTT,Fibrinogen"></div>
+    <div class="test-item" data-title="Stool Test" data-description="Also known as : Stool Routine & Culture" data-tests="2 Tests" data-price="₹ 179" data-parameters="Physical Properties,Chemical Properties,Microscopy"></div>
+    <div class="test-item" data-title="Semen Analysis" data-description="Also known as : Sperm Test, Fertility Test" data-tests="1 Test" data-price="₹ 499" data-parameters="Sperm Count,Motility,Morphology,Volume,pH"></div>
+  </div>
+
+  <div class="city-data" data-city="Dhanbad">
+    <div class="test-item" data-title="Complete Blood Count" data-description="Also known as : CBC, Complete Hemogram, Full Blood Count, Blood Panel" data-tests="3 Tests" data-price="₹ 269" data-parameters="Hemoglobin,RBC Count,WBC Count,Platelet Count,Hematocrit,MCV,MCH,MCHC"></div>
+    <div class="test-item" data-title="Liver Function Test" data-description="Also known as : Liver profile, LFT, Liver Function Test, Basic Liver Panel" data-tests="3 Tests" data-price="₹ 269" data-parameters="SGOT (AST),SGPT (ALT),Alkaline Phosphatase,Total Bilirubin,Direct Bilirubin,Albumin,Globulin,A/G Ratio"></div>
+    <div class="test-item" data-title="Blood Sugar Test" data-description="Also known as : Glucose Test, FBS, Random Blood Sugar" data-tests="2 Tests" data-price="₹ 149" data-parameters="Fasting Blood Sugar,Random Blood Sugar,Post Meal Sugar"></div>
+    <div class="test-item" data-title="Kidney Function Test" data-description="Also known as : KFT, Renal Function Test, Kidney Panel" data-tests="4 Tests" data-price="₹ 309" data-parameters="Creatinine,BUN,Sodium,Potassium,Calcium,Phosphorus"></div>
+    <div class="test-item" data-title="Urine Routine & Microscopy Extended" data-description="Also known as : pH Urine, Urine routine test, Leucocyte Esterase" data-tests="3 Tests" data-price="₹ 269" data-parameters="Urine pH,Protein,Glucose,Ketones,Bilirubin,Urobilinogen,Pus Cells,RBCs"></div>
+    <div class="test-item" data-title="Lipid Profile" data-description="Also known as : Cholesterol Test, Lipids, Lipid Panel" data-tests="4 Tests" data-price="₹ 259" data-parameters="Total Cholesterol,LDL Cholesterol,HDL Cholesterol,Triglycerides,VLDL"></div>
+    <div class="test-item" data-title="Thyroid Profile" data-description="Also known as : TSH, T3, T4, Thyroid Function Test" data-tests="3 Tests" data-price="₹ 409" data-parameters="TSH,Free T3,Free T4,Total T3,Total T4"></div>
+    <div class="test-item" data-title="Chest X-Ray" data-description="Also known as : CXR, Pulmonary Imaging" data-tests="1 Test" data-price="₹ 299" data-parameters="Frontal View,Lateral View"></div>
+    <div class="test-item" data-title="Lung Function Test" data-description="Also known as : Spirometry, Pulmonary Function" data-tests="2 Tests" data-price="₹ 399" data-parameters="FVC,FEV1,DLCO"></div>
+    <div class="test-item" data-title="Occupational Health Panel" data-description="Also known as : Mining Health, Dust Exposure" data-tests="3 Tests" data-price="₹ 449" data-parameters="Silicosis Screening,Coal Dust Exposure,Respiratory Function"></div>
+    <div class="test-item" data-title="Heavy Metal Screening" data-description="Also known as : Lead, Mercury, Cadmium" data-tests="3 Tests" data-price="₹ 549" data-parameters="Lead Level,Mercury Level,Cadmium Level"></div>
+    <div class="test-item" data-title="Occupational Stress Panel" data-description="Also known as : Mental Health, Stress Assessment" data-tests="2 Tests" data-price="₹ 299" data-parameters="Cortisol Level,DHEA"></div>
+  </div>
+
+  <div class="city-data" data-city="Ranchi">
+    <div class="test-item" data-title="Complete Blood Count" data-description="Also known as : CBC, Complete Hemogram, Full Blood Count, Blood Panel" data-tests="3 Tests" data-price="₹ 259" data-parameters="Hemoglobin,RBC Count,WBC Count,Platelet Count,Hematocrit,MCV,MCH,MCHC"></div>
+    <div class="test-item" data-title="Liver Function Test" data-description="Also known as : Liver profile, LFT, Liver Function Test, Basic Liver Panel" data-tests="3 Tests" data-price="₹ 259" data-parameters="SGOT (AST),SGPT (ALT),Alkaline Phosphatase,Total Bilirubin,Direct Bilirubin,Albumin,Globulin,A/G Ratio"></div>
+    <div class="test-item" data-title="Blood Sugar Test" data-description="Also known as : Glucose Test, FBS, Random Blood Sugar" data-tests="2 Tests" data-price="₹ 139" data-parameters="Fasting Blood Sugar,Random Blood Sugar,Post Meal Sugar"></div>
+    <div class="test-item" data-title="Urine Routine & Microscopy Extended" data-description="Also known as : pH Urine, Urine routine test, Leucocyte Esterase" data-tests="3 Tests" data-price="₹ 259" data-parameters="Urine pH,Protein,Glucose,Ketones,Bilirubin,Urobilinogen,Pus Cells,RBCs"></div>
+    <div class="test-item" data-title="Kidney Function Test" data-description="Also known as : KFT, Renal Function Test, Kidney Panel" data-tests="4 Tests" data-price="₹ 299" data-parameters="Creatinine,BUN,Sodium,Potassium,Calcium,Phosphorus"></div>
+    <div class="test-item" data-title="Lipid Profile" data-description="Also known as : Cholesterol Test, Lipids, Lipid Panel" data-tests="4 Tests" data-price="₹ 249" data-parameters="Total Cholesterol,LDL Cholesterol,HDL Cholesterol,Triglycerides,VLDL"></div>
+    <div class="test-item" data-title="Thyroid Profile" data-description="Also known as : TSH, T3, T4, Thyroid Function Test" data-tests="3 Tests" data-price="₹ 399" data-parameters="TSH,Free T3,Free T4,Total T3,Total T4"></div>
+    <div class="test-item" data-title="Malaria Test" data-description="Also known as : Blood Smear, Antigen Test" data-tests="2 Tests" data-price="₹ 199" data-parameters="Blood Smear,Rapid Diagnostic Test,PCR Test"></div>
+    <div class="test-item" data-title="Dengue Screening" data-description="Also known as : NS1 Antigen, IgM/IgG" data-tests="2 Tests" data-price="₹ 299" data-parameters="NS1 Antigen,IgM Antibody,IgG Antibody"></div>
+    <div class="test-item" data-title="Typhoid Screening" data-description="Also known as : Widal Test, Blood Culture" data-tests="2 Tests" data-price="₹ 249" data-parameters="Widal O Antigen,Widal H Antigen,Blood Culture"></div>
+    <div class="test-item" data-title="HIV Testing" data-description="Also known as : AIDS Screening, Retroviral Test" data-tests="1 Test" data-price="₹ 399" data-parameters="HIV 1 & 2 Antibody,CD4 Count,Viral Load"></div>
+    <div class="test-item" data-title="Vitamin A & E Panel" data-description="Also known as : Fat Soluble Vitamins, Antioxidant Panel" data-tests="2 Tests" data-price="₹ 349" data-parameters="Vitamin A Level,Vitamin E Level"></div>
+  </div>
+
+</div>
+
   <script src="script.js"></script>
   <script src="chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
 </body>
 
 </html>

@@ -22,32 +22,68 @@ document.addEventListener('DOMContentLoaded', () => {
       colors: ['#FF8282', '#F9BA69', '#6BDDA9']
     }
   ];
+function renderPieChart(canvasId, chart) {
+  const canvas = document.getElementById(canvasId);
 
-  function renderPieChart(canvasId, chart) {
-    const canvas = document.getElementById(canvasId);
-
-    new Chart(canvas, {
-      type: 'doughnut',
-    
-      data: {
-        labels: chart.labels,
-        datasets: [{
-          data: chart.values,
-          backgroundColor: chart.colors,
-          borderWidth: 0
-        }]
-      },
-      options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        cutout: '60%',
-        plugins: {
-          legend: { display: false }
-        }
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        new Chart(canvas, {
+          type: 'doughnut',
+          plugins: [ChartDataLabels],
+          data: {
+            labels: chart.labels,
+            datasets: [{
+              data: chart.values,
+              backgroundColor: ['#FF8282', '#F9BA69', '#6BDDA9'],
+              borderWidth: 0
+            }]
+          },
+          
+         options: {
+  responsive: true,
+  maintainAspectRatio: false,
+  layout: {
+    padding: 45 
+  },
+  cutout: '60%',
+ animation: {
+              duration: 2500,       // 1.5 seconds
+              easing: 'easeOutQuart',
+              animateRotate: true,  // Spins the slices into place
+              animateScale: true    // Grows the chart from the middle
+            },
+  
+  plugins: {
+    legend: { display: false },
+    datalabels: {
+      anchor: 'end',
+      align: 'end',
+      offset: 10, 
+      clip: false, 
+      
+      color: '#444',
+      borderRadius: 4,
+      padding: 6,
+      backgroundColor: (context) => context.dataset.backgroundColor[context.dataIndex],
+      font: { weight: 'bold', size: 11 },
+      formatter: (value, context) => {
+        const total = context.chart.data.datasets[0].data.reduce((a, b) => a + b, 0);
+       const rawPercentage = (value / total) * 100;
+  const truncated = (Math.floor(rawPercentage * 100) / 100).toFixed(2);
+  return truncated + "%";
+      }
+    }
+  }
+}
+        });
+        observer.unobserve(entry.target);
       }
     });
-  }
+  }, { threshold: 0.1 });
 
+  observer.observe(canvas);
+}
   function renderTextData(containerId, chart) {
     const container = document.getElementById(containerId);
 
